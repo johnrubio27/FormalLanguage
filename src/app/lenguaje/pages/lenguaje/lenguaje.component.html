@@ -1,1 +1,76 @@
-<p>lenguaje works!</p>
+<p-card class="p-mb-2">
+    <h3>Registre sus palabras de un lenguaje separando por comas</h3>
+    <form [formGroup]="myForm" (ngSubmit)="capturarArrayLenguajes()" autocomplete="off">
+        <div class="p-formgroup-inline">
+            <div class="p-field">
+                <label for="arrayA" class="p-sr-only">LenguajeA</label>
+                <input id="arrayA" type="text" pInputText placeholder="Ingrese su lenguaje" formControlName="arrayA">
+            </div>
+            <div class="p-field">
+                <label for="arrayB" class="p-sr-only">LenguajeB</label>
+                <input id="arrayB" type="text" pInputText placeholder="Ingrese su lenguaje" formControlName="arrayB">
+            </div>
+            <div class="p-field">
+                <label for="potencia" class="p-sr-only">Potencia</label>
+                <input id="potencia" type="number" pInputText placeholder="potencia" formControlName="potencia">
+            </div>
+            <button [disabled]="myForm.invalid" pButton pRipple type="button" label="Submit" (click)="capturarArrayLenguajes()"></button>
+        </div>
+    </form>
+</p-card>
+<div *ngIf="estado">
+    <p-divider align="center">
+        <b>Operaciones de lenguajes formales</b>
+    </p-divider>
+    <div class="p-grid p-mt-2">
+        <div class="p-col-6">
+            <p-fieldset legend="Unión" [toggleable]="true">
+                {{unionlenguaje}}
+            </p-fieldset>
+        </div>
+        <div class="p-col-6">
+            <p-fieldset legend="Diferencia" [toggleable]="true">
+                <p>Diferencia entre A y B = {{diferenciaAB}} </p>
+                <p-divider></p-divider>
+                Diferencia entre B y A = {{diferenciaBA}}
+            </p-fieldset>
+        </div>
+        <div class="p-col-6">
+            <p-fieldset legend="Intersección" [toggleable]="true">
+                {{interseccion}}
+            </p-fieldset>
+        </div>
+        <div class="p-col-6">
+            <p-fieldset legend="Concatenacion" [toggleable]="true">
+                {{concatenar}}
+            </p-fieldset>
+        </div>
+    </div>
+    <p-divider align="center">
+        <b>Operaciones de lenguajes Lenguajes</b>
+    </p-divider>
+    <div class="p-grid p-mt-2">
+
+        <div class="p-col-6">
+            <p-fieldset legend="Inversa" [toggleable]="true">
+                {{lenguajeInvA}}
+                <p-divider></p-divider>
+                {{lenguajeInvB}}
+            </p-fieldset>
+        </div>
+        <div class="p-col-6">
+            <p-fieldset legend="Cardinalidad" [toggleable]="true">
+                {{cardinalidadA}} 
+                <p-divider></p-divider>
+                {{cardinalidadB}}
+            </p-fieldset>
+        </div>
+        <div class="p-col">
+            <p-fieldset legend="Potencia" [toggleable]="true">
+                {{potenciaA}}
+                <p-divider></p-divider>
+                {{potenciaB}}
+            </p-fieldset>
+        </div>
+    </div>
+</div>
