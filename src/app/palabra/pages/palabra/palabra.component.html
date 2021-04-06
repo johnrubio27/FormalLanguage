@@ -1,1 +1,29 @@
-<p>palabra works!</p>
+<p-card class="p-mb-2">
+    <h3>Ingrese una palabra</h3>
+    <form [formGroup]="myForm" (ngSubmit)="capturarArrayLenguajes()" autocomplete="off">
+        <div class="p-formgroup-inline">
+            <div class="p-field">
+                <label for="palabra" class="p-sr-only">Palabra</label>
+                <input id="palabra" type="text" pInputText placeholder="Ingrese una palabra" formControlName="palabra">
+            </div>
+            <button [disabled]="myForm.invalid" pButton pRipple type="button" label="Submit" (click)="capturarArrayLenguajes()"></button>
+        </div>
+    </form>
+</p-card>
+<div *ngIf="estado">
+    <p-divider align="center">
+        <b>Operaciones de lenguajes formales (Palabras)</b>
+    </p-divider>
+    <div class="p-grid p-mt-2">
+        <div class="p-col-6">
+            <p-fieldset legend="Inversa" [toggleable]="true">
+                {{palabraInversa}}
+            </p-fieldset>
+        </div>
+        <div class="p-col-6">
+            <p-fieldset legend="Cardinalidad" [toggleable]="true">
+                {{cardinalidad}}
+            </p-fieldset>
+        </div>
+    </div>
+</div>
