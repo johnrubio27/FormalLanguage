@@ -6,8 +6,9 @@ FormalLanguage esta desarrollado con typescript lenguaje que se transpila a java
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.3.
 
 ## Link Deploy
-Mediante Github Pages = https://johnrubio27.github.io/FormalLanguage/#/alfabeto
-
+Mediante 
+* Github Pages = https://johnrubio27.github.io/FormalLanguage/#/alfabeto
+* Netlify = https://lenguaje-formal.netlify.app/#/alfabeto
 ## Pasos para deplegar el proyecto de forma local
 
 Descargar el proyecto o utilizar git clone https://github.com/johnrubio27/FormalLanguage
