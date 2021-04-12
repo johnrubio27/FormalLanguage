@@ -39,6 +39,25 @@ Los lenguaje comparten o heredan las misma operaciones de un alfabeto añadiendo
 
 Y las palabras tienen en común las operaciones Inversa y Cardinalidad; por lo que también la implementa de la interface FuncionesCompartidas tanto los lenguajes como las palabras. 
 
+El estudiante deberá construir o desarrollar un programa usando el lenguaje JavaScript, HTML y CSS. Este programa debe tener los requisitos funcionales:
+Sobre los alfabetos:
+* Realizar la unión de alfabetos.
+* Realizar la diferencia entre alfabetos.
+* Realizar la intersección entre alfabetos.
+
+Sobre los lenguajes:
+* Calcular la unión entre lenguajes. 
+* Calcular la diferencia entre lenguajes. 
+* Calcular la intersección entre lenguajes.
+* Calcular la concatenación entre lenguajes. 
+* Calcular la potencia de un lenguaje.
+* Calcular la inversa de un lenguaje.
+* Calcular la cardinalidad de un lenguaje.
+
+Sobre las palabras:
+* Calcular la cardinalidad de una palabra.
+* Inversa de una palabra.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.3.
 
 Proyecto Presentado por:
