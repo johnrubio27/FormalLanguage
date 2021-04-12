@@ -45,5 +45,5 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Proyecto Presentado por:
 
-Leonardo Liñan
-John Rubio
+* Leonardo Liñan
+* John Rubio
