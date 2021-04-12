@@ -37,7 +37,7 @@ Los lenguaje comparten o heredan las misma operaciones de un alfabeto añadiendo
 * Concatenación
 * Potencia
 
-Y las palabras tienen en común las operaciones Inversa y Cardinalidad; por lo que también la implementa de la interface FuncionesCompartidas tanto los lenguajes como las palabras. 
+Y las palabras y los Lenguajes tienen en común las operaciones Inversa y Cardinalidad.
 
 El estudiante deberá construir o desarrollar un programa usando el lenguaje JavaScript, HTML y CSS. Este programa debe tener los requisitos funcionales:
 Sobre los alfabetos:
@@ -65,3 +65,4 @@ Proyecto Presentado por:
 * Joel Arzuza
 * Leonardo Liñan
 * John Rubio
+* Pedro Figueredo
