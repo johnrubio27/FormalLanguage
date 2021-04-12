@@ -22,11 +22,11 @@ npm install
 ng serve -o
 ```
 ## Funcionamiento y vistas del Shopping Cart
-| Tipo | Sin Acciones | Operaciones |
-| --- | --- | --- |
-| Alfabeto | ![SinOperacionesAlf](readme/alfabetosSinAnadir.png) | ![ConOperacionesAlf](readme/operacionesAlfabeto.png) |
-| Lengueaje | ![SinOperacionesLen](readme/lenguajesSinAnadir.png) | ![ConOperacionesLen](readme/operacionesLenguaje.png) |
-| Palabra | ![SinOperacionesPal](readme/palabraSinAnadir.png) | ![ConOperacionesPal](readme/operacionesPalabra.png) |
+| Sin Acciones | Operaciones |
+| --- | --- |
+| ![SinOperacionesAlf](readme/alfabetosSinAnadir.png) | ![ConOperacionesAlf](readme/operacionesAlfabeto.png) |
+| ![SinOperacionesLen](readme/lenguajesSinAnadir.png) | ![ConOperacionesLen](readme/operacionesLenguaje.png) |
+| ![SinOperacionesPal](readme/palabraSinAnadir.png) | ![ConOperacionesPal](readme/operacionesPalabra.png) |
 
 El alfabeto cuenta con las siguiente operaciones:
 * Unión
