@@ -6,31 +6,6 @@ export class Lenguajes extends Alfabetos implements FuncionesCompartidas{
         super(lenguaje1, lenguaje2);
     }
 
-    private concatenacionEspecialAlfabetos = (lenguaje1: string[], lenguaje2: string[]) => {
-        const x = lenguaje1.length;
-        const y = lenguaje2.length;
-        const concatenacionLenguaje = [];
-        for (let i = 0; i < x; i++){
-            for (let j = 0; j < y; j++){
-                    concatenacionLenguaje.push(lenguaje1[i] + lenguaje2[j]);
-            }
-        }
-        return concatenacionLenguaje;
-    }
-
-    potenciaLenguajeRecursiva = (alfabeto: string[], potencia: number) => {
-        const alf = alfabeto;
-        let resultadoParcial = [];
-        resultadoParcial = alfabeto;
-        if  (potencia === 1) {
-            resultadoParcial = alfabeto;
-        }
-        else{
-            resultadoParcial = this.concatenacionEspecialAlfabetos(this.potenciaLenguajeRecursiva(resultadoParcial, potencia - 1), alf);
-        }
-        return resultadoParcial;
-    }
-
     inversa(lenguajes: string[]): string[]{
         const lenguajeInvertido: string[] = [];
         for (const lenguaje of lenguajes){
@@ -61,6 +36,31 @@ export class Lenguajes extends Alfabetos implements FuncionesCompartidas{
             }
         }
         return concatenado;
+    }
+
+    private concatenacionEspecialAlfabetos(lenguaje1: string[], lenguaje2: string[]) {
+        const x = lenguaje1.length;
+        const y = lenguaje2.length;
+        const concatenacionLenguaje = [];
+        for (let i = 0; i < x; i++){
+            for (let j = 0; j < y; j++){
+                    concatenacionLenguaje.push(lenguaje1[i] + lenguaje2[j]);
+            }
+        }
+        return concatenacionLenguaje;
+    }
+
+    potenciaLenguajeRecursiva(alfabeto: string[], potencia: number) {
+        const alf = alfabeto;
+        let resultadoParcial = [];
+        resultadoParcial = alfabeto;
+        if  (potencia === 1) {
+            resultadoParcial = alfabeto;
+        }
+        else{
+            resultadoParcial = this.concatenacionEspecialAlfabetos(this.potenciaLenguajeRecursiva(resultadoParcial, potencia - 1), alf);
+        }
+        return resultadoParcial;
     }
 
 

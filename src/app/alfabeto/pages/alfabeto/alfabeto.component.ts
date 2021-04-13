@@ -9,6 +9,7 @@ import { Alfabetos } from '../../models/alfabeto.model';
 })
 export class AlfabetoComponent implements OnInit {
 
+  // Son los array que vamos a utilizar 
   alfabetoArrayA!: string[];
   alfabetoArrayB!: string[];
 
@@ -41,15 +42,15 @@ export class AlfabetoComponent implements OnInit {
 
   // Funcion utilizada para obtener los dos alfabetos ingresado por el usuario
   capturarArrayAlfabetos(): void {
-    const { arrayA, arrayB, potencia } = this.myForm.value;
+    const { arrayA, arrayB } = this.myForm.value;
     this.alfabetoArrayA = limpiarRepetidos((arrayA.trim()).split(','));
     this.alfabetoArrayB = limpiarRepetidos((arrayB.trim()).split(','));
-    this.operacionesValidas(this.alfabetoArrayA , this.alfabetoArrayB, potencia);
+    this.operacionesValidas(this.alfabetoArrayA , this.alfabetoArrayB);
   }
 
-  operacionesValidas(lenguaje1: string[], lenguaje2: string[], potencia: number): void {
+  operacionesValidas(alfabeto1: string[], alfabeto2: string[]): void {
     this.estado = true;
-    const objAlfabeto = new Alfabetos(lenguaje1, lenguaje2);
+    const objAlfabeto = new Alfabetos(alfabeto1, alfabeto2);
     this.unionAlfabeto = objAlfabeto.unionAlfabeto();
     this.diferenciaAB = objAlfabeto.diferenciaAlfabetoAB();
     this.diferenciaBA = objAlfabeto.diferenciaAlfabetoBA();
