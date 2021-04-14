@@ -66,3 +66,4 @@ Proyecto Presentado por:
 * Leonardo Liñan
 * John Rubio
 * Pedro Figueredo
+* Jean Paul Buitrago
